@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Admin Dashboard</h1>
+
+<div class="card mb-4">
+    <div class="card-header">Create New Task</div>
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Create Task</button>
+        </form>
+    </div>
+</div>
+<div class="card mt-4">
+    <div class="card-header">Assigned Tasks</div>
+    <ul class="list-group list-group-flush">
+        {% for task in assigned_tasks %}
+            <li class="list-group-item">{{ task.title }} ({{ task.status }}) - Assigned to: {{ task.assigned_to.username }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<table class="table table-striped mb-0">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Assigned To</th>
+            <th>Status</th>
+            <th>Worked Hours</th>
+            <th>Report</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for task in assigned_tasks %}
+        <tr>
+            <td>{{ task.title }}</td>
+            <td>{{ task.assigned_to.username }}</td>
+            <td>{{ task.status }}</td>
+            <td>{{ task.worked_hours|default:"--" }}</td>
+            <td>
+                {% if task.status == 'Completed' %}
+                    <a href="{% url 'task-report-detail' task.id %}" class="btn btn-info btn-sm">View Report</a>
+                {% else %}
+                    <span>--</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

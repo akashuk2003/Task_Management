@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "ea8bfd19-86c6-4faf-b46f-0f7f03873581",
+		"name": "Task_Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40302115",
+		"_collection_link": "https://team-a-3376.postman.co/workspace/DEVELOPER_UPSKILL~8b7e445f-6a12-4936-872f-3d766858494d/collection/40302115-ea8bfd19-86c6-4faf-b46f-0f7f03873581?action=share&source=collection_link&creator=40302115"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"user1\",\r\n    \"password\":\"akash@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "LOGIN EXAMPLE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"user1\",\r\n    \"password\":\"akash@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8002/api/token/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"token",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 17 Sep 2025 07:31:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "489"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1ODE4MDY3MSwiaWF0IjoxNzU4MDk0MjcxLCJqdGkiOiJiMzg1N2I1MGNjMjI0YjQyYTE0YTAxMTkyYjhkMzk4YSIsInVzZXJfaWQiOiIyIn0._BeK5niK_hectU6zi8tZ6I3HqswcvLjxcYR6DMFLb-U\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU4MDk0NTcxLCJpYXQiOjE3NTgwOTQyNzEsImp0aSI6ImNjYjdmYzg1NTNhMTQ4ZGQ4MThjMTkzMDhiNjFiM2Q5IiwidXNlcl9pZCI6IjIifQ.SGjUEwuQ_uCA2_tocpgVsFyHS3rlLHnQmEsXd-h353Q\"\n}"
+						}
+					]
+				},
+				{
+					"name": "REFRESH",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1ODE3MDg2OCwiaWF0IjoxNzU4MDg0NDY4LCJqdGkiOiIwYjVkMDk4Y2I2ZDE0Zjg4OTg0NzQ3MmM0ZmNiODMyYiIsInVzZXJfaWQiOiIyIn0.n43b-l_9RNXaNEZz5mQ0_6mBGw3M3O5M1y0SiyLMMLA\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VIEW TASKS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU4MDk0NTcxLCJpYXQiOjE3NTgwOTQyNzEsImp0aSI6ImNjYjdmYzg1NTNhMTQ4ZGQ4MThjMTkzMDhiNjFiM2Q5IiwidXNlcl9pZCI6IjIifQ.SGjUEwuQ_uCA2_tocpgVsFyHS3rlLHnQmEsXd-h353Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/tasks/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "VIEW TASKS EXAMPLE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8002/api/tasks/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"tasks",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 17 Sep 2025 07:31:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "255"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Task1\",\n        \"description\": \"sample text\",\n        \"status\": \"Pending\",\n        \"due_date\": \"2025-09-18\",\n        \"assigned_to_username\": \"user1\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Task3\",\n        \"description\": \"Sample Desc\",\n        \"status\": \"Pending\",\n        \"due_date\": \"2025-09-25\",\n        \"assigned_to_username\": \"user1\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "COMPLETE-TASK",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU4MDk0NTcxLCJpYXQiOjE3NTgwOTQyNzEsImp0aSI6ImNjYjdmYzg1NTNhMTQ4ZGQ4MThjMTkzMDhiNjFiM2Q5IiwidXNlcl9pZCI6IjIifQ.SGjUEwuQ_uCA2_tocpgVsFyHS3rlLHnQmEsXd-h353Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"completion_report\": \"Finished\",\r\n    \"worked_hours\": 5.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8002/api/tasks/1/complete/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"api",
+								"tasks",
+								"1",
+								"complete",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "COMPLETE-TASK EXAMPLE",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"completion_report\": \"Finished\",\r\n    \"worked_hours\": 5.5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8002/api/tasks/1/complete/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"tasks",
+										"1",
+										"complete",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 17 Sep 2025 07:35:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "PUT, PATCH, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"completion_report\": \"Finished\",\n    \"worked_hours\": \"5.50\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
