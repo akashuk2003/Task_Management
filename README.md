@@ -23,8 +23,9 @@ This is a Django-based task management system designed to track tasks, worked ho
 
 1.  **Clone the Repo**
     ```bash
-    git clone 
-    cd 
+    git clone `https://github.com/akashuk2003/Task_Management`
+    cd task_management
+
     ```
 
 2.  **Set Up Your Virtual Environment**
