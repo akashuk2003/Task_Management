@@ -6,7 +6,7 @@ This is a Django-based task management system designed to track tasks, worked ho
 
 ***User:** View tasks, mark them as complete, and submit reports with their worked hours.
 
-*** Admin:** Allows assigning new tasks and reviewing the completion reports.
+***Admin:** Allows assigning new tasks and reviewing the completion reports.
 
 ***SuperAdmin** Allows create, edit, and delete any user; view every task in the system,promote regular users to the Admin role or demote them.
 
@@ -62,11 +62,11 @@ This is a Django-based task management system designed to track tasks, worked ho
     app will run at `http://127.0.0.1:8000/`.
 
 6.  **Final Steps**
-    After Superuser creation, use the superuser credentials to login to the Dashboard.
-    Create a user
-    Promote the user to admin
-    Create another user
-    Use the `edit` feature to assign the user to an admin
+    After Superuser creation, use the superuser credentials to login to the Dashboard,
+    Create a user,
+    Promote the user to admin,
+    Create another user,
+    Use the `edit` feature to assign the user to an admin.
 
     
 
